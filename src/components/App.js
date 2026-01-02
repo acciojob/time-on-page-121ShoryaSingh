@@ -1,13 +1,16 @@
-
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import './../styles/App.css';
 
 const App = () => {
-  return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+  const [timer, setTimer] = useState(0);
 
-export default App
+  useEffect(() => {
+    setInterval(() => {
+      setTimer((prev) => prev + 1);
+    }, 1000);
+  }, []);
+
+  return <div>{`You've been on this page for ${timer} seconds`}</div>;
+};
+
+export default App;
