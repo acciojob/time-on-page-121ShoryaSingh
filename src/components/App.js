@@ -10,7 +10,7 @@ const App = () => {
     }, 1000);
   }, []);
 
-  return <div>{`You've been on this page for ${timer} seconds`}</div>;
+  return <p>{`You've been on this page for ${timer} seconds`}</p>;
 };
 
 export default App;
